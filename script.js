@@ -24,26 +24,42 @@ function lerSelects(){
     const selects = document.querySelectorAll('select');
     selects.forEach(contarOpcao);
     console.log(quantidade_a)
-    if(quantidade_a>quantidade_b && quantidade_a>quantidade_c && quantidade_a>quantidade_d && quantidade_a>quantidade_e){
-        document.getElementById("tela").innerHTML = "Quantidade de A foi "+ quantidade_a;
-    }
-    if(quantidade_b>quantidade_a && quantidade_b>quantidade_c && quantidade_b>quantidade_d && quantidade_b>quantidade_e){
-        document.getElementById("tela").innerHTML = "Quantidade de B foi "+ quantidade_b;
-    }
-    if(quantidade_c>quantidade_a && quantidade_c>quantidade_b && quantidade_c>quantidade_d && quantidade_c>quantidade_e){
-        document.getElementById("tela").innerHTML = "Quantidade de C foi "+ quantidade_c;
-    }
-    if(quantidade_d>quantidade_a && quantidade_d>quantidade_b && quantidade_d>quantidade_c && quantidade_d>quantidade_e){
-        document.getElementById("tela").innerHTML = "Quantidade de D foi "+ quantidade_d;
-    }
-    if(quantidade_e>quantidade_a && quantidade_e>quantidade_b && quantidade_e>quantidade_c && quantidade_e>quantidade_d){
-        document.getElementById("tela").innerHTML = "Quantidade de E foi "+ quantidade_e;
-    }
-
+    console.log(quantidade_b)
+    console.log(quantidade_c)
+    console.log(quantidade_d)
+    console.log(quantidade_e)
+     atualizarPorcentagema();
+     atualizarPorcentagemb();
+     atualizarPorcentagemc();
+     atualizarPorcentagemd();
+     atualizarPorcentageme();
 }
 
-
-
+function atualizarPorcentagema(){
+    const skillBar = document.getElementById('e');
+    skillBar.style.width = quantidade_a*10+'%';
+    skillBar.innerHTML = quantidade_a*10+'%';
+}
+function atualizarPorcentagemb(){
+    const skillBar = document.getElementById('ex');
+    skillBar.style.width = quantidade_b*10+'%';
+    skillBar.innerHTML = quantidade_b*10+'%';
+}
+function atualizarPorcentagemc(){
+    const skillBar = document.getElementById('exa');
+    skillBar.style.width = quantidade_c*10+'%';
+    skillBar.innerHTML = quantidade_c*10+'%';
+}
+function atualizarPorcentagemd(){
+    const skillBar = document.getElementById('exat');
+    skillBar.style.width = quantidade_d*10+'%';
+    skillBar.innerHTML = quantidade_d*10+'%';
+}
+function atualizarPorcentageme(){
+    const skillBar = document.getElementById('exata');
+    skillBar.style.width = quantidade_e*10+'%';
+    skillBar.innerHTML = quantidade_e*10+'%';
+}
 
 
 
